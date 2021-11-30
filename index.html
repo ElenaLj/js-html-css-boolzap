@@ -7,11 +7,60 @@
     <title>Boolzapp</title>
     <!-- css -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
 
     <div id="root">
-        <div class="container"></div>
+        <div class="container">
+            <!-- colonna di sinistra -->
+            <div class="col-sx">
+                <!-- sezione avatar io e icons -->
+                <div class="my_profile">
+                    <div class="avatar">
+                        <img src="img/avatar_io.jpg" alt="My profile picture">
+                        <span>Nome Utente</span>
+                    </div>
+
+                    <div class="icons">
+                        <i class="fas fa-circle-notch"></i>
+                        <i class="fas fa-comment-alt"></i>
+                        <i class="fas fa-ellipsis-v"></i>
+                    </div>
+                </div>
+                <!-- /sezione avatar io e icons -->
+
+                <!-- sezione notifica messaggi -->
+                <div class="notifica">
+                    <div class="bell">
+                        <i class="fas fa-bell-slash"></i>
+                    </div>
+
+                    <div class="bell-text">
+                        <p>Ricevi notifiche di nuovi messaggi</p>
+                        <p>Attiva notifiche desktop</p>
+                    </div>
+                </div>
+                <!-- /sezione notifica messaggi -->
+
+                <!-- sezione ricerca -->
+                <div class="search">
+                    <div class="searchbar">
+                        <div class="zoom">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <input id="input" type="text" placeholder="Cerca o inizia una nuova chat">
+                    </div>
+                </div>
+                <!-- /sezione ricerca -->
+            </div>
+            <!-- /colonna di sinistra -->
+
+            <!-- colonna di destra -->
+            <div class="col-dx"></div>
+            <!-- /colonna di destra -->
+        </div>
     </div>
     <!-- vue -->
     <!-- development version, includes helpful console warnings -->

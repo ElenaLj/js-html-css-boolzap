@@ -24,8 +24,126 @@ body {
     margin: 20px auto;
 }
 
+.container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/* *** colonna di sinistra *** */
+.container .col-sx {
+    width: 40%;
+    height: 100%;
+    float: left;
+}
+
+.container .col-sx .my_profile {
+    height: 70px;
+    background-color: #eaeaea;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.my_profile .avatar {
+    display: flex;
+    align-items: center;
+}
+
+.my_profile .avatar img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.container .col-sx .icons > i {
+    margin-right: 5px;
+    color: #b1b1b1;
+    font-size: 20px;
+}
+
+.container .col-sx .notifica {
+    height: 70px;
+    padding: 10px;
+    background-color: #8edafc;
+    display: flex;
+    align-items: center;
+}
+
+.container .col-sx .notifica .bell {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    background-color: #f2fbff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .col-sx .notifica .bell i {
+    color: #8edafc;
+    font-size: 25px;
+}
+
+.notifica .bell-text p:last-child {
+    color: grey;
+    font-size: 14px;
+    text-decoration: underline;
+}
+
+.container .col-sx .search {
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #eaeaea;
+}
+
+.search .searchbar {
+    display: flex;
+}
+
+.search .searchbar .zoom {
+    width: 15%;
+    height: 30px;
+    border-left: 1px solid #eaeaea;
+    line-height: 30px;
+    vertical-align: middle;
+    text-align: center;
+    background-color: white;
+}
+
+.zoom > i {
+    color: #b1b1b1;
+    font-size: 20px;
+}
+
+#input {
+    width: 85%;
+    border: none;
+}
+
+/* *** colonna di destra *** */
+.container .col-dx {
+    width: 60%;
+    height: 100%;
+    float: left;
+}
+
 /* *** debug *** */
 .container {
     /* height: 700px; */
     background-color: aliceblue;
+}
+
+.container .col-sx {
+    background-color: lightblue; 
+}
+
+.container .col-dx {
+    background-color: lightskyblue; 
 }
