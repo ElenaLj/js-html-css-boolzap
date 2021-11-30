@@ -1,0 +1,31 @@
+/* *** commons *** */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* height: 100vh; */
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(180deg, #009688 20%, #d9dbd4 20%, #d9dbd4 50%);
+    background-repeat: no-repeat;
+    overflow-y: hidden;
+}
+
+/* *** finestra della chat *** */
+#root {
+    height: 100vh;
+}
+
+.container {
+    width: 80%;
+    height: 95%;
+    margin: 20px auto;
+}
+
+/* *** debug *** */
+.container {
+    /* height: 700px; */
+    background-color: aliceblue;
+}
