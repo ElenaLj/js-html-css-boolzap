@@ -38,6 +38,13 @@ img {
     clear: both;
 }
 
+.container .col-sx .icons > i,
+.container .col-dx .icons > i {
+    margin-right: 5px;
+    color: #b1b1b1;
+    font-size: 20px;
+}
+
 
 /* *** colonna di sinistra *** */
 
@@ -48,7 +55,8 @@ img {
     background-color: white;
 }
 
-.container .col-sx .my_profile {
+.profile,
+.chat  {
     height: 70px;
     background-color: #eaeaea;
     display: flex;
@@ -57,23 +65,17 @@ img {
     padding: 10px;
 }
 
-.my_profile .avatar {
+.profile .avatar {
     display: flex;
     align-items: center;
 }
 
-/* .my_profile .avatar img {
+/* .profile .avatar img {
     width: 50px;
     height: 50px;
     margin-right: 10px;
     border-radius: 50%;
 } */
-
-.container .col-sx .icons > i {
-    margin-right: 5px;
-    color: #b1b1b1;
-    font-size: 20px;
-}
 
 .container .col-sx .notifica {
     height: 70px;
@@ -155,6 +157,23 @@ img {
     width: 60%;
     height: 100%;
     float: left;
+    background-image: url(../img/mine.jpg);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.chat i {
+    width: 5%;
+    margin-left: 20px;
+    font-size: 20px;
+    color: grey;
+}
+
+#chat {
+    flex-grow: 1;
+    border: none;
+    padding: 5px;
 }
 
 /* *** debug *** */
@@ -166,7 +185,3 @@ img {
 /* .container .col-sx {
     background-color: lightblue; 
 } */
-
-.container .col-dx {
-    background-color: lightskyblue; 
-}
