@@ -13,7 +13,15 @@ body {
     overflow-y: hidden;
 }
 
+img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
 /* *** finestra della chat *** */
+
 #root {
     height: 100vh;
 }
@@ -32,10 +40,12 @@ body {
 
 
 /* *** colonna di sinistra *** */
+
 .container .col-sx {
     width: 40%;
     height: 100%;
     float: left;
+    background-color: white;
 }
 
 .container .col-sx .my_profile {
@@ -52,12 +62,12 @@ body {
     align-items: center;
 }
 
-.my_profile .avatar img {
+/* .my_profile .avatar img {
     width: 50px;
     height: 50px;
     margin-right: 10px;
     border-radius: 50%;
-}
+} */
 
 .container .col-sx .icons > i {
     margin-right: 5px;
@@ -110,7 +120,7 @@ body {
 .search .searchbar .zoom {
     width: 15%;
     height: 30px;
-    border-left: 1px solid #eaeaea;
+    border-right: 1px solid #eaeaea;
     line-height: 30px;
     vertical-align: middle;
     text-align: center;
@@ -119,12 +129,25 @@ body {
 
 .zoom > i {
     color: #b1b1b1;
-    font-size: 20px;
+    font-size: 15px;
 }
 
 #input {
     width: 85%;
     border: none;
+    padding: 5px;
+}
+
+.contacts ul {
+    list-style: none;
+}
+
+.contacts ul li {
+    height: 70px;
+    border-bottom: 1px solid #eaeaea;
+    display: flex;
+    align-items: center;
+    margin-left: 10px;  
 }
 
 /* *** colonna di destra *** */
@@ -135,14 +158,14 @@ body {
 }
 
 /* *** debug *** */
-.container {
-    /* height: 700px; */
+/* .container {
+    height: 700px;
     background-color: aliceblue;
-}
+} */
 
-.container .col-sx {
+/* .container .col-sx {
     background-color: lightblue; 
-}
+} */
 
 .container .col-dx {
     background-color: lightskyblue; 
