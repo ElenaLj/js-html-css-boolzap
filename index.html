@@ -58,7 +58,12 @@
                 <!-- lista dinamica contatti -->
                 <div class="contacts">
                     <ul>
-                        <li>
+                        <li v-for="contact in contacts">
+                            <img v-bind:src=" 'img/avatar' + contact.avatar + '.jpg' " alt="avatar 1">
+                            <span>{{contact.name}}</span>
+                        </li>
+
+                        <!-- <li>
                             <img src="img/avatar_1.jpg" alt="avatar 1">
                             <span>Nome persona</span>
                         </li>
@@ -71,12 +76,7 @@
                         <li>
                             <img src="img/avatar_1.jpg" alt="avatar 1">
                             <span>Nome persona</span>
-                        </li>
-
-                        <li>
-                            <img src="img/avatar_1.jpg" alt="avatar 1">
-                            <span>Nome persona</span>
-                        </li>
+                        </li> -->
                     </ul>
                 </div>
                 <!-- /lista dinamica contatti -->
@@ -111,6 +111,7 @@
             <!-- /colonna di destra -->
         </div>
     </div>
+
     <!-- vue -->
     <!-- development version, includes helpful console warnings -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
