@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boolzapp</title>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap" rel="stylesheet">
     <!-- css -->
     <link rel="stylesheet" href="css/style.css">
     <!-- fontawesome -->
@@ -59,7 +63,7 @@
                 <div class="contacts">
                     <ul>
                         <li v-for="contact in contacts">
-                            <img v-bind:src=" 'img/avatar' + contact.avatar + '.jpg' " alt="avatar">
+                            <img v-bind:src=" 'img/avatar' + contact.avatar + '.jpg' " v-bind:alt="contact.name">
                             <span>{{contact.name}}</span>
                         </li>
 
