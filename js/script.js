@@ -83,6 +83,7 @@ const app = new Vue({
             },
         ],
         currentIndex: 0,
+        messageIndex: 0,
     },
     methods: {
 
