@@ -59,7 +59,7 @@
                 <div class="contacts">
                     <ul>
                         <li v-for="contact in contacts">
-                            <img v-bind:src=" 'img/avatar' + contact.avatar + '.jpg' " alt="avatar 1">
+                            <img v-bind:src=" 'img/avatar' + contact.avatar + '.jpg' " alt="avatar">
                             <span>{{contact.name}}</span>
                         </li>
 
@@ -99,6 +99,18 @@
                     </div>
                 </div>
                 <!-- /sezione avatar io e icons -->
+
+                <!-- sezione della chat -->
+                <div class="messages">
+                    <div class="clearfix">
+                        <div class="sent"></div>
+                    </div>
+
+                    <div class="clearfix">
+                        <div class="received"></div>
+                    </div>
+                </div>
+                <!-- /sezione della chat -->
 
                 <!-- sezione footer chat -->
                 <div class="chat">
