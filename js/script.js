@@ -95,6 +95,13 @@ const app = new Vue({
             if(index == this.currentIndex) {
                 return 'active';
             } 
+        },
+        addMessageClass: function(index) {
+            if(this.contacts[this.currentIndex].messages[index].status == 'sent') {
+                return 'sent';
+            } else {
+                return 'received';
+            }
         }
     }
 });

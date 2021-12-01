@@ -111,16 +111,19 @@
                 <!-- sezione della chat -->
                 <div class="messages">
                     <div class="clearfix">
-                        <div class="sent" v-for="(message, index) in contacts[currentIndex].messages">
+                        <div 
+                            v-for="(message, index) in contacts[currentIndex].messages"
+                            v-bind:class="addMessageClass(index)"
+                        >
                             {{index}} => {{message.message}}
                         </div>
                     </div>
 
-                    <div class="clearfix">
+                    <!-- <div class="clearfix">
                         <div class="received">
                             Bene grazie, tu?
                         </div>
-                    </div>
+                    </div> -->
                 </div>
                 <!-- /sezione della chat -->
 
