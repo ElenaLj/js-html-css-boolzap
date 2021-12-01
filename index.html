@@ -130,7 +130,7 @@
                         type="text" 
                         placeholder="Scrivi un messaggio" 
                         v-model="newInput" 
-                        v-on:keyup.enter="addNewMessage()"
+                        v-on:keyup.enter="addNewMessage(), autoReply()"
                     >
                     <i class="fas fa-microphone"></i>
                 </div>
@@ -140,6 +140,8 @@
         </div>
     </div>
 
+    <!-- date CDN -->
+    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
     <!-- vue -->
     <!-- development version, includes helpful console warnings -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>

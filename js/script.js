@@ -106,11 +106,20 @@ const app = new Vue({
         },
         addNewMessage: function() {
             this.contacts[this.currentIndex].messages.push({
-                date: '10/01/2020 15:30:55',
+                date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
                 message: this.newInput,
                 status: 'sent'
             });
             this.newInput = "";
+        },
+        autoReply: function() {
+            setTimeout( () => {
+                this.contacts[this.currentIndex].messages.push({
+                    date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
+                    message: 'Ok :)',
+                    status: 'received'
+                });
+            },1000);  
         }
     }
 });
