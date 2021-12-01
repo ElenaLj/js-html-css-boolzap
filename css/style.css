@@ -191,12 +191,12 @@ img {
     overflow-y: auto;
 }
 
-.clearfix {
+.messages-container {
     width: 100%;
     margin: 10px 0;
-    content: "";
-    display: table;
-    clear: both;
+    display: flex;
+    flex-flow: column nowrap;
+    row-gap: 5px;
 }
 
 .sent {
@@ -206,7 +206,7 @@ img {
   line-height: 1.6;
   background-color: #d5f9ba; 
   border-radius: 10px;
-  float: right;
+  align-self: flex-end;
 }
 
 .received {
@@ -216,7 +216,13 @@ img {
     border-radius: 10px;
     padding: 10px;
     line-height: 1.6;
-    float: left;
+    align-self: flex-start;
+}
+
+.message-date {
+    color: grey;
+    font-size: 11px;
+    text-align: right;
 }
 
 /* *** debug *** */

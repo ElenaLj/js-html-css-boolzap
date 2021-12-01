@@ -110,20 +110,15 @@
 
                 <!-- sezione della chat -->
                 <div class="messages">
-                    <div class="clearfix">
+                    <div class="messages-container">
                         <div 
                             v-for="(message, index) in contacts[currentIndex].messages"
                             v-bind:class="addMessageClass(index)"
                         >
                             {{index}} => {{message.message}}
+                            <div class="message-date">{{message.date}}</div>
                         </div>
                     </div>
-
-                    <!-- <div class="clearfix">
-                        <div class="received">
-                            Bene grazie, tu?
-                        </div>
-                    </div> -->
                 </div>
                 <!-- /sezione della chat -->
 
