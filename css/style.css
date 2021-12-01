@@ -194,7 +194,10 @@ img {
 .sent {
   width: 250px;
   height: 50px;
+  padding: 10px;
+  line-height: 1.6;
   background-color: #d5f9ba; 
+  border-radius: 10px;
   float: right;
 }
 
@@ -202,8 +205,11 @@ img {
     width: 250px;
     height: 50px;
     background-color: #ffffff; 
+    border-radius: 10px;
+    padding: 10px;
+    line-height: 1.6;
     float: left;
-  }
+}
 
 /* *** debug *** */
 /* .container {
