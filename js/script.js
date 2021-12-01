@@ -86,6 +86,9 @@ const app = new Vue({
         messageIndex: 0,
     },
     methods: {
-
+        setActiveContact: function(index) {
+            //console.log("selected index is ", index);
+            this.currentIndex = index;
+        }
     }
 });

@@ -62,9 +62,12 @@
                 <!-- lista dinamica contatti -->
                 <div class="contacts">
                     <ul>
-                        <li v-for="contact in contacts">
+                        <li 
+                            v-for="(contact, index) in contacts"
+                            @click="setActiveContact(index)"
+                        >
                             <img v-bind:src=" 'img/avatar' + contact.avatar + '.jpg' " v-bind:alt="contact.name">
-                            <span>{{contact.name}}</span>
+                            <span>{{index}} => {{contact.name}}</span>
                         </li>
 
                         <!-- <li>
