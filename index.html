@@ -65,6 +65,7 @@
                         <li 
                             v-for="(contact, index) in contacts"
                             @click="setActiveContact(index)"
+                            v-bind:class="addActiveClass(index)"
                         >
                             <img v-bind:src=" 'img/avatar' + contact.avatar + '.jpg' " v-bind:alt="contact.name">
                             <span>{{index}} => {{contact.name}}</span>
@@ -110,8 +111,8 @@
                 <!-- sezione della chat -->
                 <div class="messages">
                     <div class="clearfix">
-                        <div class="sent">
-                            {{contacts[currentIndex].messages[messageIndex].message}}
+                        <div class="sent" v-for="(message, index) in contacts[currentIndex].messages">
+                            {{index}} => {{message.message}}
                         </div>
                     </div>
 

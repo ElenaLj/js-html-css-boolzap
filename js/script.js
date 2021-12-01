@@ -6,7 +6,8 @@ const app = new Vue({
                 name: 'Michele',
                 avatar: '_1',
                 visible: true,
-                messages: [{
+                messages: [
+                {
                     date: '10/01/2020 15:30:55',
                     message: 'Hai portato a spasso il cane?',
                     status: 'sent'
@@ -89,6 +90,11 @@ const app = new Vue({
         setActiveContact: function(index) {
             //console.log("selected index is ", index);
             this.currentIndex = index;
+        },
+        addActiveClass: function(index) {
+            if(index == this.currentIndex) {
+                return 'active';
+            } 
         }
     }
 });
