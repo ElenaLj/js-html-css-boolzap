@@ -125,7 +125,13 @@
                 <!-- sezione footer chat -->
                 <div class="chat">
                     <i class="far fa-smile"></i>
-                    <input id="chat" type="text" placeholder="Scrivi un messaggio">
+                    <input 
+                        id="chat" 
+                        type="text" 
+                        placeholder="Scrivi un messaggio" 
+                        v-model="newInput" 
+                        v-on:keyup.enter="addNewMessage()"
+                    >
                     <i class="fas fa-microphone"></i>
                 </div>
                 <!-- /sezione footer chat -->

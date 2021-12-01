@@ -85,6 +85,7 @@ const app = new Vue({
         ],
         currentIndex: 0,
         messageIndex: 0,
+        newInput: '',
     },
     methods: {
         setActiveContact: function(index) {
@@ -102,6 +103,14 @@ const app = new Vue({
             } else {
                 return 'received';
             }
+        },
+        addNewMessage: function() {
+            this.contacts[this.currentIndex].messages.push({
+                date: '10/01/2020 15:30:55',
+                message: this.newInput,
+                status: 'sent'
+            });
+            this.newInput = "";
         }
     }
 });
