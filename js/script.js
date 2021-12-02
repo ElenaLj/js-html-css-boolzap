@@ -89,15 +89,18 @@ const app = new Vue({
         searchContact: '',
     },
     methods: {
+        // questa funzione fa sì che al click il currentIndex si aggiorni e prenda l'indice dell'elemento selezionato  
         setActiveContact: function(index) {
             //console.log("selected index is ", index);
             this.currentIndex = index;
         },
+        // questa funzione rende visibile all'utente l'elemento selezionato perché aggiunge la classe CSS active
         addActiveClass: function(index) {
             if(index == this.currentIndex) {
                 return 'active';
             } 
         },
+        // questa funzione distingue tra messaggi inviati (sent in verde) e ricevuti (received in bianco) aggiungengo la rispettiva classe CSS - in base al valore della chiave status degli oggetti in data
         addMessageClass: function(index) {
             if(this.contacts[this.currentIndex].messages[index].status == 'sent') {
                 return 'sent';
@@ -105,6 +108,7 @@ const app = new Vue({
                 return 'received';
             }
         },
+        // questa funzione aggiunge un nuovo oggetto all'array messages in contacts con classe CSS sent, data e il messaggio inserito tramite nell'input grazie al v-model
         addNewMessage: function() {
             this.contacts[this.currentIndex].messages.push({
                 date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
@@ -113,6 +117,7 @@ const app = new Vue({
             });
             this.newInput = "";
         },
+        // questa funzione fa partire una risposta automatica dopo 1s dall'invio di un nuovo messaggio - viene sollecitata dal tasto enter insieme alla f.ne addNewMessage sopra
         autoReply: function() {
             setTimeout( () => {
                 this.contacts[this.currentIndex].messages.push({
@@ -123,6 +128,7 @@ const app = new Vue({
             },1000);  
         },
     },
+    // questa computed property filtra l'array contacts alla ricerca di un riscontro tra le propietà name degli oggetti e la variabile searchContact (ovvero ciò che inserisce l'utente) 
     computed: {
         filteredNames: function() {
             return this.contacts.filter((contact) => {

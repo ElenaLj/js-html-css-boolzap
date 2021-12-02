@@ -6,7 +6,6 @@
 }
 
 body {
-    /* height: 100vh; */
     font-family: 'Lato', sans-serif;
     background-image: linear-gradient(180deg, #009688 20%, #d9dbd4 20%, #d9dbd4 50%);
     background-repeat: no-repeat;
@@ -20,11 +19,11 @@ img {
     border-radius: 50%;
 }
 
-/* *** finestra della chat *** */
-
 #root {
     height: 100vh;
 }
+
+/* *** finestra della chat *** */
 
 .container {
     width: 80%;
@@ -54,29 +53,24 @@ img {
     height: 100%;
     float: left;
     background-color: white;
+    display: flex;
+    flex-direction: column;
 }
 
 .profile,
 .chat  {
     height: 70px;
+    padding: 10px;
     background-color: #eaeaea;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
 }
 
 .profile .avatar {
     display: flex;
     align-items: center;
 }
-
-/* .profile .avatar img {
-    width: 50px;
-    height: 50px;
-    margin-right: 10px;
-    border-radius: 50%;
-} */
 
 .container .col-sx .notifica {
     height: 70px;
@@ -141,6 +135,10 @@ img {
     padding: 5px;
 }
 
+.contacts {
+    overflow-y: scroll;
+}
+
 .contacts ul {
     list-style: none;
 }
@@ -155,6 +153,8 @@ img {
 
 .contacts ul li:hover {
     cursor: pointer;
+    transition: 300ms ease-in-out;
+    background-color: #e7f0e4;
 }
 
 .active {
@@ -202,7 +202,6 @@ img {
 
 .sent {
     width: 250px;
-    /* height: 50px; */
     padding: 10px;
     line-height: 1.6;
     background-color: #d5f9ba; 
@@ -226,7 +225,6 @@ img {
 
 .received {
     width: 250px;
-    /* height: 50px; */
     background-color: #ffffff; 
     border-radius: 10px;
     padding: 10px;
