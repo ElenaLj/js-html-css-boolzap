@@ -24,7 +24,7 @@
                 <div class="profile">
                     <div class="avatar">
                         <img src="img/avatar_io.jpg" alt="My profile picture">
-                        <span>Nome Utente</span>
+                        <span>Elena</span>
                     </div>
 
                     <div class="icons">
@@ -96,8 +96,11 @@
                 <!-- sezione avatar io e icons -->
                 <div class="profile">
                     <div class="avatar">
-                        <img src="img/avatar_1.jpg" alt="avatar_1">
-                        <span>Nome Utente</span>
+                        <img 
+                            v-bind:src=" `img/avatar${contacts[currentIndex].avatar}.jpg` " 
+                            v-bind:alt="contacts[currentIndex].name"
+                        >
+                        <span>{{contacts[currentIndex].name}}</span>
                     </div>
 
                     <div class="icons">
