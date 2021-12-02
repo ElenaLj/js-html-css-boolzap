@@ -122,11 +122,6 @@ const app = new Vue({
                 });
             },1000);  
         },
-        // setActiveAvatar: function(index) {
-        //     if(this.contacts[this.currentIndex] == index) {
-        //         alert(ciao);
-        //     }
-        // }
     },
     computed: {
         filteredNames: function() {
