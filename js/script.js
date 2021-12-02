@@ -86,6 +86,7 @@ const app = new Vue({
         currentIndex: 0,
         messageIndex: 0,
         newInput: '',
+        searchContact: '',
     },
     methods: {
         setActiveContact: function(index) {
@@ -120,6 +121,13 @@ const app = new Vue({
                     status: 'received'
                 });
             },1000);  
+        },
+    },
+    computed: {
+        filteredNames: function() {
+            return this.contacts.filter((contact) => {
+                return contact.name.toLowerCase().match(this.searchContact);
+            });
         }
     }
 });

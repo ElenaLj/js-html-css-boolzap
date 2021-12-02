@@ -54,7 +54,7 @@
                         <div class="zoom">
                             <i class="fas fa-search"></i>
                         </div>
-                        <input id="input" type="text" placeholder="Cerca o inizia una nuova chat">
+                        <input id="input" type="text" placeholder="Cerca o inizia una nuova chat" v-model="searchContact">
                     </div>
                 </div>
                 <!-- /sezione ricerca -->
@@ -63,12 +63,12 @@
                 <div class="contacts">
                     <ul>
                         <li 
-                            v-for="(contact, index) in contacts"
+                            v-for="(contact, index) in filteredNames"
                             @click="setActiveContact(index)"
                             v-bind:class="addActiveClass(index)"
                         >
                             <img v-bind:src=" 'img/avatar' + contact.avatar + '.jpg' " v-bind:alt="contact.name">
-                            <span>{{index}} => {{contact.name}}</span>
+                            <span>{{contact.name}}</span>
                         </li>
 
                         <!-- <li>
@@ -115,7 +115,7 @@
                             v-for="(message, index) in contacts[currentIndex].messages"
                             v-bind:class="addMessageClass(index)"
                         >
-                            {{index}} => {{message.message}}
+                            {{message.message}}
                             <div class="message-date">{{message.date}}</div>
                         </div>
                     </div>
